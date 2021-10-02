@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Quicksand',sans-serif;
+}
+
+/* Navbar */
+nav {
+    background: whitesmoke;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    margin-bottom: 1px;
+}
+
+label.logo {
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover {
+    background: #1b9bff;
+    transition: .5s;
+}
+.checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+
+/* Untuk container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/* Bagian Banner */
+.banner {
+    background-image: linear-gradient(to right,rgba(138,43,226,1),rgba(77, 5, 232, 1));
+    padding: 100px;
+    height: 400px;
+}
+
+.banner img {
+    width: 180px;
+    border-radius: 50px;
+    box-shadow: 0 3px 5px #000;
+    margin-bottom: 10px;
+}
+
+.banner h2,
+.banner p, .banner span {
+    color: #ffff;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.banner-left{
+    padding-left: 24px;
+}
+
+
+/* untuk Tag Section */
+section {
+    padding: 50px 0;
+}
+
+section h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #dddd;
+    left: calc(50% - 60px);
+}
+
+section h3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height:4px;
+    background-color: #F53428;
+    left: calc(50% - 20px);
+}
+
+/* ABOUT */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.card {
+    width: 20%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+.card-header {
+    text-align: center;
+    padding: 30px 10px;
+    background-color: #F53428;
+    color: #fff;
+}
+  
+.card-body {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* SKILL */
+#skill,
+.contact {
+    background-color: #f0f1f0;
+}
+
+#skill .bar {
+    height: 30px;
+    background-color: #ffff;
+    margin: 5px 0 20px 0;
+}
+
+.bar .nilai {
+    height: 30px;
+    background-color: #F53428;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+
+.html {
+    width: 80%;
+}
+
+.css {
+    width: 30%;
+}
+
+.js {
+    width: 10%
+}
+
+.col-4 {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.col-4 a:hover img {
+    transform: scale(1.2);
+}
+
+.col-3 {
+    width: 33.33%;
+    border: 1px solid;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.col-3 h4 {
+    margin-bottom: 20px;
+}
+
+#contact {
+    height: 510px;
+}
+
+
+
+
+/* Responsive Breakpoint */
+
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 80%;
+        height: 385px;
+        background-image: linear-gradient(to right,rgba(138,43,226,1),rgba(77, 5, 232, 1));
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        color: white;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
